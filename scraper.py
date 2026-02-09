@@ -12,7 +12,7 @@ import os
 import sys
 
 # Configuración
-N8N_WEBHOOK_URL = os.getenv('N8N_WEBHOOK_URL', 'https://tu-droplet.com/webhook/falabella-scraper')
+N8N_WEBHOOK_URL = os.getenv('N8N_WEBHOOK_URL', 'https://api.n8nangelvargas.me/webhook-test/7b44142f-5ae5-4ce8-80ea-e241bd466ad9')
 FALABELLA_URL = "https://www.falabella.com.pe/falabella-pe/collection/ver-todo-zapatillas-y-zapatos-hombre?sortBy=derived.price.search%2Casc"
 
 def log(message):
