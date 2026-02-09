@@ -1,0 +1,25 @@
+services:
+  - type: cron
+    name: falabella-scraper
+    env: python
+    region: oregon  # o singapore (más cerca a Perú)
+    plan: free
+    
+    # Ejecutar cada 10 minutos
+    schedule: "*/10 * * * *"
+    
+    # Comandos
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
+      playwright install-deps
+    
+    startCommand: "python scraper.py"
+    
+    # Variables de entorno
+    envVars:
+      - key: N8N_WEBHOOK_URL
+        sync: false  # La defines manualmente en Render dashboard
+      
+      - key: PYTHONUNBUFFERED
+        value: "1"
